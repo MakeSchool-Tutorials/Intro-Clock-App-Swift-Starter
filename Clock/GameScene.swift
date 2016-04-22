@@ -28,8 +28,11 @@ public class GameScene: SKScene {
         let clock = childNodeWithName("clock")!
         
         hourHand = clock.childNodeWithName("hourHand")
+        hourHand?.zPosition = 10
         minuteHand = clock.childNodeWithName("minuteHand")
+        minuteHand?.zPosition = 10
         secondHand = clock.childNodeWithName("secondHand")
+        secondHand?.zPosition = 10
         
         updateTime()
 
