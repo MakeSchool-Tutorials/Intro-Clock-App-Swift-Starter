@@ -10,8 +10,8 @@ import Foundation
 
 public class ClockFace {
     
-    var date = NSDate()
-    let calendar = NSCalendar.currentCalendar()
+    var date: NSDate = NSDate()
+    let calendar: NSCalendar = NSCalendar.currentCalendar()
     
     public func updateDate() {
         date = NSDate()

@@ -8,8 +8,6 @@
 
 import SpriteKit
 
-let blockCategory: UInt32 = 1 << 1
-
 func degreesToRadians(degrees: Double) -> CGFloat {
     return CGFloat(degrees * M_PI / 180)
 }
@@ -37,20 +35,6 @@ public class GameScene: SKScene {
         updateTime()
 
         NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(GameScene.updateTime), userInfo: nil, repeats: true)
-    }
-    
-    class func unarchiveFromFile(file: String) -> SKScene? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
-            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
     }
     
     func updateTime() {

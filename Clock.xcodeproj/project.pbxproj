@@ -33,7 +33,7 @@
 		181E27E11CC7DEEE00F3AAD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181E27E41CC7DEEE00F3AAD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181E27E61CC7DEEE00F3AAD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		181E27EC1CC7E16F00F3AAD6 /* FixTheClockScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FixTheClockScene.sks; sourceTree = "<group>"; };
+		181E27EC1CC7E16F00F3AAD6 /* FixTheClockScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = FixTheClockScene.sks; path = Clock/FixTheClockScene.sks; sourceTree = "<group>"; };
 		18C6EFE91CC93D4200EBCF9C /* ClockFace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockFace.swift; sourceTree = "<group>"; };
 		BC772D8A1D03FC0700117896 /* fix_the_clock_Artboard 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fix_the_clock_Artboard 3.png"; path = "Clock/fix_the_clock_Artboard 3.png"; sourceTree = "<group>"; };
 		BC772D8B1D03FC0700117896 /* fix_the_clock-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fix_the_clock-02.png"; path = "Clock/fix_the_clock-02.png"; sourceTree = "<group>"; };
@@ -58,6 +58,7 @@
 		18144B451CC9A3E900B1A7EF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				181E27EC1CC7E16F00F3AAD6 /* FixTheClockScene.sks */,
 				BC772D8A1D03FC0700117896 /* fix_the_clock_Artboard 3.png */,
 				BC772D8B1D03FC0700117896 /* fix_the_clock-02.png */,
 				BC772D8C1D03FC0700117896 /* fix_the_clock-03.png */,
@@ -89,15 +90,14 @@
 		181E27D51CC7DEEE00F3AAD6 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
-				181E27D61CC7DEEE00F3AAD6 /* AppDelegate.swift */,
-				181E27EC1CC7E16F00F3AAD6 /* FixTheClockScene.sks */,
-				181E27DA1CC7DEEE00F3AAD6 /* GameScene.swift */,
 				181E27DC1CC7DEEE00F3AAD6 /* GameViewController.swift */,
+				181E27DA1CC7DEEE00F3AAD6 /* GameScene.swift */,
 				18C6EFE91CC93D4200EBCF9C /* ClockFace.swift */,
-				181E27DE1CC7DEEE00F3AAD6 /* Main.storyboard */,
 				181E27E11CC7DEEE00F3AAD6 /* Assets.xcassets */,
+				181E27DE1CC7DEEE00F3AAD6 /* Main.storyboard */,
 				181E27E31CC7DEEE00F3AAD6 /* LaunchScreen.storyboard */,
 				181E27E61CC7DEEE00F3AAD6 /* Info.plist */,
+				181E27D61CC7DEEE00F3AAD6 /* AppDelegate.swift */,
 			);
 			path = Clock;
 			sourceTree = "<group>";
