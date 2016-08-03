@@ -90,9 +90,9 @@
 		181E27D51CC7DEEE00F3AAD6 /* Clock */ = {
 			isa = PBXGroup;
 			children = (
+				18C6EFE91CC93D4200EBCF9C /* ClockFace.swift */,
 				181E27DC1CC7DEEE00F3AAD6 /* GameViewController.swift */,
 				181E27DA1CC7DEEE00F3AAD6 /* GameScene.swift */,
-				18C6EFE91CC93D4200EBCF9C /* ClockFace.swift */,
 				181E27E11CC7DEEE00F3AAD6 /* Assets.xcassets */,
 				181E27DE1CC7DEEE00F3AAD6 /* Main.storyboard */,
 				181E27E31CC7DEEE00F3AAD6 /* LaunchScreen.storyboard */,

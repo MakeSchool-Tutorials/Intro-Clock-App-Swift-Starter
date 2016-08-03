@@ -18,14 +18,23 @@ public class ClockFace {
     }
     
     public func getHourHandDegrees() -> Double {
-        return 0
+        let hour = calendar.component(.Hour, fromDate: date) % 12 // just in case it returns 24-hour time
+        let minute: Int = calendar.component(.Minute, fromDate: date)
+        let second: Int = calendar.component(.Second, fromDate: date)
+        return Double(hour) * (360.0 / 12) +
+            Double(minute) * (360.0 / 12 / 60) +
+            Double(second) * (360.0 / 12 / 60 / 60)
     }
     
     public func getMinuteHandDegrees() -> Double {
-        return 0
+        let minute: Int = calendar.component(.Minute, fromDate: date)
+        let second: Int = calendar.component(.Second, fromDate: date)
+        return Double(minute) * (360.0 / 60) +
+            Double(second) * (360.0 / 60 / 60)
     }
     
     public func getSecondHandDegrees() -> Double {
-        return 0
+        let second: Int = calendar.component(.Second, fromDate: date)
+        return Double(second) * (360.0 / 60)
     }
 }
