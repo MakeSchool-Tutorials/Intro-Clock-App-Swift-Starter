@@ -8,24 +8,24 @@
 
 import Foundation
 
-public class ClockFace {
+open class ClockFace {
     
-    var date: NSDate = NSDate()
-    let calendar: NSCalendar = NSCalendar.currentCalendar()
+    var date: Date = Date()
+    let calendar: Calendar = Calendar.current
     
-    public func updateDate() {
-        date = NSDate()
+    func updateDate() {
+        date = Date()
     }
     
-    public func getHourHandDegrees() -> Double {
+    func getHourHandDegrees() -> Double {
         return 0
     }
     
-    public func getMinuteHandDegrees() -> Double {
+    func getMinuteHandDegrees() -> Double {
         return 0
     }
     
-    public func getSecondHandDegrees() -> Double {
+    func getSecondHandDegrees() -> Double {
         return 0
     }
 }

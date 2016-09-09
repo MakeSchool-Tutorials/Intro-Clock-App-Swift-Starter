@@ -8,11 +8,11 @@
 
 import SpriteKit
 
-func degreesToRadians(degrees: Double) -> CGFloat {
+func degreesToRadians(_ degrees: Double) -> CGFloat {
     return CGFloat(degrees * M_PI / 180)
 }
 
-public class GameScene: SKScene {
+open class GameScene: SKScene {
     var timeLabel: SKLabelNode?
     var hourHand: SKNode?
     var minuteHand: SKNode?
@@ -20,29 +20,29 @@ public class GameScene: SKScene {
     
     let clockFace = ClockFace()
     
-    override public func didMoveToView(view: SKView) {
-        timeLabel = childNodeWithName("timeLabel") as? SKLabelNode
+    override open func didMove(to view: SKView) {
+        timeLabel = childNode(withName: "timeLabel") as? SKLabelNode
         
-        let clock = childNodeWithName("clock")!
+        let clock = childNode(withName: "clock")!
         
-        hourHand = clock.childNodeWithName("hourHand")
+        hourHand = clock.childNode(withName: "hourHand")
         hourHand?.zPosition = 10
-        minuteHand = clock.childNodeWithName("minuteHand")
+        minuteHand = clock.childNode(withName: "minuteHand")
         minuteHand?.zPosition = 10
-        secondHand = clock.childNodeWithName("secondHand")
+        secondHand = clock.childNode(withName: "secondHand")
         secondHand?.zPosition = 10
         
         updateTime()
 
-        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(GameScene.updateTime), userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameScene.updateTime), userInfo: nil, repeats: true)
     }
     
     func updateTime() {
         clockFace.updateDate()
         
-        let hours = clockFace.calendar.component(.Hour, fromDate: clockFace.date)
-        let minutes = clockFace.calendar.component(.Minute, fromDate: clockFace.date)
-        let seconds = clockFace.calendar.component(.Second, fromDate: clockFace.date)
+        let hours = clockFace.calendar.component(.hour, from: clockFace.date)
+        let minutes = clockFace.calendar.component(.minute, from: clockFace.date)
+        let seconds = clockFace.calendar.component(.second, from: clockFace.date)
         
         let timeString = "\(String(format: "%02d", hours)):\(String(format: "%02d", minutes)):\(String(format: "%02d", seconds))"
         timeLabel?.text = "The time is \(timeString)"
