@@ -40,7 +40,7 @@ open class GameScene: SKScene {
     func updateTime() {
         clockFace.updateDate()
         
-        let hours = clockFace.calendar.component(.hour, from: clockFace.date)
+        let hours = clockFace.calendar.component(.hour, from: clockFace.date) % 12
         let minutes = clockFace.calendar.component(.minute, from: clockFace.date)
         let seconds = clockFace.calendar.component(.second, from: clockFace.date)
         
