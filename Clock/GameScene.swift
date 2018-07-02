@@ -9,7 +9,7 @@
 import SpriteKit
 
 func degreesToRadians(_ degrees: Double) -> CGFloat {
-    return CGFloat(degrees * M_PI / 180)
+    return CGFloat(degrees * Double.pi / 180)
 }
 
 open class GameScene: SKScene {
@@ -37,7 +37,7 @@ open class GameScene: SKScene {
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(GameScene.updateTime), userInfo: nil, repeats: true)
     }
     
-    func updateTime() {
+    @objc func updateTime() {
         clockFace.updateDate()
         
         let hours = clockFace.calendar.component(.hour, from: clockFace.date) % 12
